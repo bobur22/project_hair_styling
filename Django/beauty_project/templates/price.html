@@ -1,0 +1,259 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+
+{% block content %}
+    <section id="section_4">
+
+        <div class="section_1_d">
+            <div class="sec_1sen text-center">
+                <h1 class="text-white font-f-g">Цены на услуги</h1>
+            </div>
+            <div class="sec_1img container pt-5">
+                <div class="card bg-none mb-3" style="max-width: 100%; background-color:black;">
+                    <div class="card mb-5" style="max-width: 100%; background-color:black;">
+                        {% if price %}
+
+                        {% endif %}
+                        {% for i in price %}
+                            <div class="row g-0">
+                                <div class="col-md-6 pt-md-5">
+                                    <img src="{{ i.img.url }}" class="img-fluid start rounded-3 opacity_img" alt="..."
+                                         name="img_price">
+                                </div>
+                                <div class="col-md-6 text-white mt-auto mb-auto price_text">
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3"
+                                                style="font-weight: 700;">{{ i.h1.capitalize }}</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text"> {{ i.price1 }} ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ {{ i.text1 }}</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3"
+                                                style="font-weight: 700;">{{ i.h2.capitalize }}</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text"> {{ i.price2 }} ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ {{ i.text2 }}</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3"
+                                                style="font-weight: 700;">{{ i.h3.capitalize }}</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text"> {{ i.price3 }} ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ {{ i.text3 }}</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3"
+                                                style="font-weight: 700;">{{ i.h4.capitalize }}</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text"> {{ i.price4 }} ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ {{ i.text4 }}</small></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                        {% endfor %}
+
+                    <div class="card mb-5" style="max-width: 100%; background-color:black;">
+                        <div class="row g-0">
+                            <div class="col-md-6 text-white pe-5 mt-auto mb-auto div_price_all">
+                                <div class="all">
+                                    <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                        <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                            укладка</h5>
+                                        <p class="card-text font-f-cg h3" style="font-weight: 700;"><small class="text">1
+                                            000 ₽ </small></p>
+                                    </div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <p class="card-text font-f-cg h5 border-bottom pb-3" style="font-weight: 400;">
+                                            <small class="text">+ обработк кончинков волос</small></p>
+                                    </div>
+                                </div>
+                                <div class="all">
+                                    <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                        <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                            укладка</h5>
+                                        <p class="card-text font-f-cg h3" style="font-weight: 700;"><small class="text">1
+                                            000 ₽ </small></p>
+                                    </div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <p class="card-text font-f-cg h5 border-bottom pb-3" style="font-weight: 400;">
+                                            <small class="text">+ обработк кончинков волос</small></p>
+                                    </div>
+                                </div>
+                                <div class="all">
+                                    <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                        <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                            укладка</h5>
+                                        <p class="card-text font-f-cg h3" style="font-weight: 700;"><small class="text">1
+                                            000 ₽ </small></p>
+                                    </div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <p class="card-text font-f-cg h5 border-bottom pb-3" style="font-weight: 400;">
+                                            <small class="text">+ обработк кончинков волос</small></p>
+                                    </div>
+                                </div>
+                                <div class="all">
+                                    <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                        <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                            укладка</h5>
+                                        <p class="card-text font-f-cg h3" style="font-weight: 700;"><small class="text">1
+                                            000 ₽ </small></p>
+                                    </div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <p class="card-text font-f-cg h5 border-bottom pb-3" style="font-weight: 400;">
+                                            <small class="text">+ обработк кончинков волос</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pt-md-5">
+                                <img src="{% static "main/img/price_1.jpg" %}" class="img-fluid start rounded-3 opacity_img"
+                                     alt="...">
+                            </div>
+                            <div class="col-md-6 text-white mt-auto mb-auto price_text div_price_down">
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="max-width: 100%; background-color:black;">
+                            <div class="row g-0 ">
+                                <div class="col-md-6 pt-md-5">
+                                    <img src="{% static "main/img/price_1.jpg" %}" class="img-fluid start rounded-3 opacity_img"
+                                         alt="...">
+                                </div>
+                                <div class="col-md-6 text-white mt-auto mb-auto price_text">
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-md-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="all">
+                                        <div class="card-body d-flex justify-content-between pb-0 pt-3">
+                                            <h5 class="card-title font-f-cg h3" style="font-weight: 700;">Женская
+                                                укладка</h5>
+                                            <p class="card-text font-f-cg h3" style="font-weight: 700;"><small
+                                                    class="text">1 000 ₽ </small></p>
+                                        </div>
+                                        <div class="card-body pt-0 pb-0">
+                                            <p class="card-text font-f-cg h5 border-bottom pb-3"
+                                               style="font-weight: 400;"><small class="text">+ обработк кончинков
+                                                волос</small></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+{% endblock %}

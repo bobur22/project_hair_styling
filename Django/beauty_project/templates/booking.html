@@ -1,0 +1,86 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+
+{% block content %}
+    <section>
+
+        <div class="section_1_d">
+            <div class="sec_1sen text-center">
+                <h1 class="text-white font-f-g">Бронирование</h1>
+            </div>
+            <div class="sec_1img container pt-5 w-75">
+                <form action="{% url 'booking' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="text text-white" style="background: none;">
+                        <h3 class="font-f-g mb-3">Ваша информация</h3>
+                        <div class="location">
+                            <a href="https://www.google.com/maps/place/Salon+Krasoty/@41.2900133,69.1988702,17z/data=!4m14!1m7!3m6!1s0x38ae8beffca14c73:0x75082d6f5432bc32!2sSalon+Krasoty!8m2!3d41.2900093!4d69.2014451!16s%2Fg%2F11sq_spc3q!3m5!1s0x38ae8beffca14c73:0x75082d6f5432bc32!8m2!3d41.2900093!4d69.2014451!16s%2Fg%2F11sq_spc3q?entry=ttu"
+                               class="heanav border-bottom-0"><i class="bi bi-geo-alt-fill"></i></a>
+                            <span class="font-f-cg">Google Meet palvelu</span>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 1200px;background: none;">
+                        <div class="row g-0 pt-2">
+                            <div class="col img_jd">
+                                <img src="{% static "main/img/jazzmin.png" %}" class="img start rounded-3 img_jazz"
+                                     alt="...">
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-5 col-xl-5 pt-sm-5Email send from Changa">
+                                <div class="card-body bg-none mt-4">
+                                    <div class="row-cols-sm-2">
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Имя *</p>
+                                            <input type="text" class="form-control text-white"
+                                                   aria-label="First name"
+                                                   style="background: none;" name="f_name">
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Фамилия *</p>
+                                            <input type="text" class="form-control text-white"
+                                                   aria-label="Last name"
+                                                   style="background: none;" name="l_name">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 mt-3">
+                                        <div class="col">
+                                            <p class="mb-0 text-white font-f-g pb-2">Ваш электронный адрес *</p>
+                                            <input type="email" class="form-control text-white" id="inputEmail3"
+                                                   style="background: none;" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <p class="mb-0 text-white font-f-g pb-2">Номер телефона *</p>
+                                            <input type="text" class="form-control text-white" id="inputEmail3"
+                                                   style="background: none;" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Дата *</p>
+                                            <input type="date" class="form-control text-white"
+                                                   aria-label="First name"
+                                                   style="background: none;" name="date">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Время *</p>
+                                            <input type="time" class="form-control text-white"
+                                                   aria-label="First name"
+                                                   style="background: none;" name="time">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-flex justify-content-md-end p-3">
+                            <button type="submit" class="btn btn-outline-light mt-3 py-3 px-4">Подтверждать</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

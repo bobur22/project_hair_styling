@@ -1,0 +1,65 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+
+{% block content %}
+    <section>
+
+        <div class="section_1_d">
+            <div class="sec_1sen text-center">
+                <h1 class="text-white font-f-g">Отзывы</h1>
+            </div>
+            <div class="sec_1img pt-5 w-75 container">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="card mb-3" style="max-width: 1200px;background: none;">
+                        <div class="row g-0 pt-2 container">
+                            <div class="col img_jd">
+                                <img src="{% static "main/img/jazzmin.png" %}" class="img start rounded-3 img_jazz"
+                                     alt="...">
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                <div class="card-body bg-none mt-4">
+                                    <div class="row-cols-sm-2 ">
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Имя *</p>
+                                            <input type="text" class="form-control text-white" aria-label="First name"
+                                                   style="background: none;" name="f_name">
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p class="mb-0 text-white font-f-g pb-2">Фамилия *</p>
+                                            <input type="text" class="form-control text-white" aria-label="Last name"
+                                                   style="background: none;" name="l_name">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 mt-3">
+                                        <div class="col">
+                                            <p class="mb-0 text-white font-f-g pb-2">Ваш электронный адрес *</p>
+                                            <input type="email" class="form-control text-white" id="inputEmail3"
+                                                   style="background: none;" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <p class="mb-0 text-white font-f-g pb-2">Номер телефона *</p>
+                                            <input type="text" class="form-control text-white" id="inputEmail3"
+                                                   style="background: none;" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-floating">
+                                        <p class="mb-0 text-white font-f-g pb-2">Отзывы *</p>
+                                        <textarea class="form-control text-white pt-2 pb-1" id="floatingTextarea2"
+                                                  style="height: 70px; background: none;" name="report"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-flex justify-content-md-end p-3">
+                            <button type="submit" class="btn btn-outline-light mt-3 py-3 px-4">Подтверждать</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

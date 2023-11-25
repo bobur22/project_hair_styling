@@ -1,0 +1,175 @@
+{% load static %}
+<nav class="navbar bg-none navbar-dark fixed-top p-0">
+    <div class="container">
+        <ul class="container d-flex justify-content-between align-items-center pb-3 border-bottom ul_li pt-4 pb-4 px-0">
+            <li class="nav-item">
+                <a class="heanav_1" aria-current="page" href="https://www.instagram.com/"><i
+                        class="bi bi-instagram" style="font-size: 24px;"></i></a>
+            </li>
+            <li class="nav-item uli_a">
+                {% url 'beaty' as beaty %}
+                <a class="heanav font-f-cg
+                        {% if request.path == beaty %}
+                            active
+                        {% endif %}
+                        " id="lnk_1" aria-current="page" href="{% url "beaty" %}" style="font-weight:400">Главная</a>
+            </li>
+            <li class="nav-item uli_a">
+                {% url 'master' as master %}
+                <a class="heanav font-f-cg
+                        {% if request.path == master %}
+                            active
+                        {% endif %}
+                        " id="lnk_2" href="{% url 'master' %}" style="font-weight:400">Мастера</a>
+            </li>
+            <li class="nav-item uli_a">
+                <a class="heanav font-f-cg
+
+                        " id="lnk_3" href="{% url 'booking' %}" style="font-weight:400">Бронирование</a>
+            </li>
+            <li class="nav-item">
+                <a class="" href="{% url "beaty" %}"><img
+                        src="{% static "main/img/Vectorlogo.svg" %}" alt=""></a>
+            </li>
+            <li class="nav-item uli_a">
+                {% url 'price' as price %}
+                <a class="heanav font-f-cg
+                        {% if request.path == price %}
+                            active
+                        {% endif %}
+                        " id="lnk_4" href="{% url "price" %}" style="font-weight:400">Цены</a>
+            </li>
+            <li class="nav-item uli_a">
+                {% url 'reports' as reports %}
+                <a class="heanav font-f-cg
+                        {% if request.path == reports %}
+                            active
+                        {% endif %}
+                        " id="lnk_5" href="{% url 'reports' %}" style="font-weight:400">Отзывы</a>
+            </li>
+            <li class="nav-item uli_a">
+                {% url 'contacts' as contacts %}
+                <a class="heanav font-f-cg
+                        {% if request.path == contacts %}
+                            active
+                        {% endif %}
+                        " id="lnk_6" href="{% url "contacts" %}" style="font-weight:100">Контакты</a>
+            </li>
+            <li class="nav-item">
+                <button class="navbar-toggler border-0 p-0" type="menu" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <a class="heanav border-bottom-0" id="menu" aria-current="page" href="#"><i class="bi bi-list"
+                                                                                                style="font-size: 35px; font-weight: 400;"></i></a>
+                </button>
+            </li>
+        </ul>
+        <div class="offcanvas offcanvas-end bg-black text-white container" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="static">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Delote-beauty</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="pb-5">
+                    <ul class="container d-flex justify-content-between align-items-center pb-3 ul_li">
+                        <li>
+                            {% url 'beaty' as beaty %}
+                            <a class="heanav font-f-cg
+                        {% if request.path == beaty %}
+                            active
+                        {% endif %}
+                        " id="lnk_1" aria-current="page" href="{% url "beaty" %}" style="font-weight:400">Главная</a>
+                        </li>
+                        <li>
+                            {% url 'master' as master %}
+                            <a class="heanav font-f-cg
+                        {% if request.path == master %}
+                            active
+                        {% endif %}
+                        " id="lnk_2" href="{% url 'master' %}" style="font-weight:400">Мастера</a></li>
+                        <li>
+                            <a class="heanav font-f-cg
+                        " id="lnk_3" href="{% url 'booking' %}" style="font-weight:400">Бронирование</a></li>
+                    </ul>
+                    <ul class="container d-flex justify-content-between align-items-center pb-3 ul_li">
+                        <li>
+                            {% url 'price' as price %}
+                            <a class="heanav font-f-cg
+                        {% if request.path == price %}
+                            active
+                        {% endif %}
+                        " id="lnk_4" href="{% url "price" %}" style="font-weight:400">Цены</a></li>
+                        <li>
+                            {% url 'reports' as reports %}
+                            <a class="heanav font-f-cg
+                        {% if request.path == reports %}
+                            active
+                        {% endif %}
+                        " id="lnk_5" href="{% url 'reports' %}" style="font-weight:400">Отзывы</a></li>
+                        <li>
+                            {% url 'contacts' as contacts %}
+                            <a class="heanav font-f-cg
+                        {% if request.path == contacts %}
+                            active
+                        {% endif %}
+                        " id="lnk_6" href="{% url "contacts" %}" style="font-weight:100">Контакты</a></li>
+                    </ul>
+                    <ul class="container d-flex justify-content-between align-items-center pb-3 ul_li">
+                        {% if not request.user.is_authenticated %}
+                            <li>
+                                {% url 'register' as register %}
+                                <a class="heanav font-f-cg
+                        {% if request.path == register %}
+                            active
+                        {% endif %}
+                        " id="lnk_4" href="{% url "register" %}" style="font-weight:400">Регистратцыя</a></li>
+                            <li>
+                                {% url 'login' as login %}
+                                <a class="heanav font-f-cg
+                        {% if request.path == login %}
+                            active
+                        {% endif %}
+                        " id="lnk_5" href="{% url 'login' %}" style="font-weight:400">Log in</a></li>
+                        {% endif %}
+{#                        <li>#}
+{#                            {% url 'logout' as logout %}#}
+{#                            <a class="heanav font-f-cg#}
+{#                        {% if request.path == logout %}#}
+{#                            active#}
+{#                        {% endif %}#}
+{#                        " id="lnk_6" href="" style="font-weight:100">My work</a></li>#}
+                    </ul>
+                </div>
+                <div class="pb-4">
+                    <p class="pb-3 text-white font-f-g">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum,
+                        adipiscing amet in egestas sem dui, arcu faucibus scelerisque. Nisl est felis id volutpat. Sed
+                        dolor fermentum amet lectus nibh quis. Tortor donec pellentesque leo ac placerat. Morbi.</p>
+                </div>
+                <div class="pb-5">
+                    <h5 class="font-f-cg pb-3" style="font-weight: 400;">Контакты</h5>
+                    <p class="mb-0 font-f-g pb-2">+3 (093) 123-45-67</p>
+                    <p class="mb-0 font-f-g pb-2">+3 (093) 123-45-67</p>
+                    <p class="mb-0 font-f-g">Майдан Независимости, дом 36</p>
+                </div>
+                <div class="">
+                    <h5 class="font-f-cg pb-3" style="font-weight: 400;">Режим работы</h5>
+                    <p class="mb-0 font-f-g pb-2">C 10:00 до 21:00 (Пн-Пт)</p>
+                    <p class="mb-0 font-f-g pb-2">С 11:00 до 20:00 (Сб-Вс)</p>
+                </div>
+                {% if request.user.is_authenticated %}
+                    <div class="">
+                        <ul class="ul_li container px-0">
+                            <li>{% url 'logout' as logout %}
+                                <a class="heanav font-f-cg
+                        {% if request.path == logout %}
+                            active
+                        {% endif %}
+                        " id="lnk_5" href="{% url 'logout' %}" style="font-weight:400">Log out</a></li>
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,66 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <section class="vh-100 pt-5" style="background-color: black;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body px-4 py-5 px-md-5">
+                            <h3 class="mb-5 text-center">Sign up</h3>
+                            <form action="{% url "register" %}" method="POST">
+                                {% csrf_token %}
+
+                                {{ form|crispy }}
+{#                                <div class="row">#}
+{#                                    <div class="col-md-6 mb-4">#}
+{#                                        <div class="form-outline">#}
+{#                                            <input type="text" id="form3Example1" class="form-control"#}
+{#                                                   placeholder="First name" name="f_name"/>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="col-md-6 mb-4">#}
+{#                                        <div class="form-outline">#}
+{#                                            <input type="text" id="form3Example2" class="form-control"#}
+{#                                                   placeholder="Last name" name="l_name"/>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-outline mb-4">#}
+{#                                    <input type="text" id="form3Example3" class="form-control" placeholder="Username"#}
+{#                                           name="u_name"/>#}
+{#                                    {{ form.username }}#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-outline mb-4">#}
+{#                                    <input type="email" id="form3Example3" class="form-control"#}
+{#                                           placeholder="Email address" name="email"/>#}
+{#                                    {{ form.email }}#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-outline mb-4">#}
+{#                                    <input type="password" id="form3Example4" class="form-control"#}
+{#                                           placeholder="Password" name="password1"/>#}
+{#                                    {{ form.password }}#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-outline mb-4">#}
+{#                                    <input type="password" id="form3Example4" class="form-control"#}
+{#                                           placeholder="Repeat password" name="password2"/>#}
+{#                                    {{ form.confirm_password }}#}
+{#                                </div>#}
+                                <div class="d-grid gap-2 pt-3">
+                                    <button type="submit" class="btn btn-outline-dark btn-block">Sign up</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

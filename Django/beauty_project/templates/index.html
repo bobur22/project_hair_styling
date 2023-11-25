@@ -1,0 +1,237 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block header %}
+    <div class="text-white pt-5">
+        <div class="h1_header d-flex align-items-center justify-content-center">
+            <h1 class="font-f-g text-center h1_ind" style="font-size: 70px; max-width: 500px; font-weight: 600">Салон
+                красоты
+                «Delote-Beauty» на
+                Крестовском</h1>
+        </div>
+
+        <div class="mouse d-flex justify-content-center align-items-center mt-5">
+            <a class=" heanav border-bottom-0 h4" href="#sc2" id="mouse_icon"><i class="bi bi-chevron-down mouse_a"></i></a>
+            <a class="pl-2 font-f-cg heanav mouse_at hidden" href="#sc2" id="mouse_text">Прокрутите вниз</a>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+
+    <section class="section" id="section_1">
+        <div class="section_1_d">
+            <div class="sec_1sen text-center">
+                <img src="{% static "main/img/“dott.svg" %}" alt="">
+                <div class="div d-flex justify-content-center align-items-center">
+                    <p class="pt-5 text-white w-50 font-f-cg lh-5 d-flex">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit. In arcu nibh vitae amet. Ipsum, pharetra donec ornare velit. Id at quisque accumsan risus
+                        ac
+                        ipsum ut. Sit elit, facilisi proin non malesuada sociis tristique. Viverra augue lorem ut
+                        quisque
+                        quam tortor, malesuada iaculis.<br>
+                        Et elementum at nulla venenatis, faucibus integer. Auctor neque eros, viverra rutrum. Fames
+                        ultrices
+                        condimentum tortor nec penatibus. Velit imperdiet sapien fringilla vestibulum sit fames.</p>
+                </div>
+            </div>
+            <div class="sec_1img container pt-5">
+                <div class="row row-cols-2 row-cols-md-3 g-4">
+                    {% for i in posts %}
+                        <div class="col">
+                            <div class="card h-100 bg-black bg border-0">
+                                <img src="{{ i.img.url }}" class="card-img-top opacity_img" alt="..." name="img">
+                                <div class="card-body text-white" style="background-color:black;">
+                                    <h5 class="card-title font-f-g"> {{ i.text }} </h5>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {% if request.user.is_superuser %}
+                    <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-bs-whatever="@getbootstrap">Send an Image and text
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" enctype="multipart/form-data" action="{% url "beaty" %}">
+                                        {% csrf_token %}
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Image:</label>
+                                            <input type="file" class="form-control" id="recipient-name" name="img">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Text:</label>
+                                            <input type="text" class="form-control" id="message-text"
+                                                   name="text"></input>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="btn btn-dark">Send message</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+
+            <!-- <div class="sec_1img pt-5 container ">
+                <div class="img_con_1 row">
+                    <div class="img_info col">
+                        <img src="/img/sec_1_1.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Парикмахерские услуги</span>
+                    </div>
+                    <div class="img_info col">
+                        <img src="/img/sec_1_2.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Маникюр</span>
+                    </div>
+                    <div class="img_info col">
+                        <img src="/img/sec_1_3.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Педикюр</span>
+                    </div>
+                </div>
+                <div class="img_con_2 row pt-5">
+                    <div class="img_info col">
+                        <img src="/img/sec_1_4.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Косметология</span>
+                    </div>
+                    <div class="img_info col">
+                        <img src="/img/sec_1_5.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Эстетист по телу</span>
+                    </div>
+                    <div class="img_info col">
+                        <img src="/img/sec_1_6.jpg" alt="" class="pb-4">
+                        <span class="font-f-g h3 text-white">Визаж</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="sec_1logos container text-center">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-5 pb-5 col-md">
+                        <img src="{% static "main/img/sec_1logo_1.svg" %}" class="w-50 w-sm-100" alt="...">
+                    </div>
+                    <div class="col-5 pb-5 col-md">
+                        <img src="{% static "main/img/sec_1logo_2.svg" %}" class="w-50 w-sm-100" alt="...">
+                    </div>
+                    <div class="col-5 pb-5 col-md">
+                        <img src="{% static "main/img/sec_1logo_3.svg" %}" class="w-50 w-sm-100" alt="...">
+                    </div>
+                    <div class="col-5 pb-5 col-md">
+                        <img src="{% static "main/img/sec_1logo_4.svg" %}" class="w-50 w-sm-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="sc2">
+        <div class="section container">
+            <h1 class="font-f-g text-white text-center lh-5 display-5">Наши работы</h1>
+
+            <div class="sec_2_info container w-75">
+                <div class="ul_1">
+                    <ul class="nav row row-cols-2 row-cols-md-4 g-3 g-sm gx-sm-5 text-center">
+                        <li class="nav-item col">
+                            <a class="heanav
+                            font-f-cg" href="{% url 'beaty' %}">Показать все</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="heanav
+                            font-f-cg" href="{% url 'beaty' %}?category='3'">Парикмахерские
+                                услуги</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="heanav font-f-cg" href="{% url 'beaty' %}?category='2'">Маникюр</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="heanav font-f-cg" href="{% url 'beaty' %}?category='1'">Педикюр</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sec_2_img_all container">
+                <div class="row row-cols-2 row-cols-md-3 g-4">
+                    {% if lulu %}
+                        {% for si in lulu %}
+                            <div class="col">
+                                <div class="card bg-black h-100">
+                                    <img src="{{ si.img.url }}" class="card-img-top opacity_img" alt="...">
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {#                    {% else %}#}
+                        {#                        {% for si in sec_img %}#}
+                        {#                            <div class="col">#}
+                        {#                                <div class="card h-100">#}
+                        {#                                    <img src="{{ si.img.url }}" class="card-img-top opacity_img" alt="...">#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        {% endfor %}#}
+                    {% endif %}
+
+                    {#                    <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal"#}
+                    {#                            data-bs-target="#exampleModall"#}
+                    {#                            data-bs-whatever="@getbootstrap">Send Images#}
+                    {#                    </button>#}
+                    {##}
+                    {#                    <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel"#}
+                    {#                         aria-hidden="true">#}
+                    {#                        <div class="modal-dialog">#}
+                    {#                            <div class="modal-content">#}
+                    {#                                <div class="modal-header">#}
+                    {#                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Отправить картинку:</h1>#}
+                    {#                                    <button type="button" class="btn-close" data-bs-dismiss="modal"#}
+                    {#                                            aria-label="Close"></button>#}
+                    {#                                </div>#}
+                    {#                                <div class="modal-body">#}
+                    {#                                    <form method="POST" enctype="multipart/form-data" action="{% url 'beatysec' %}">#}
+                    {#                                        {% csrf_token %}#}
+                    {#                                        <div class="mb-3">#}
+                    {#                                            <label for="recipient-name-1" class="col-form-label">Image:</label>#}
+                    {#                                            <input type="file" class="form-control" id="recipient-name-1" name="img">#}
+                    {#                                        </div>#}
+                    {#                                        <div class="form-floating">#}
+                    {#                                            <select class="form-select" id="floatingSelect"#}
+                    {#                                                    aria-label="Floating label select example">#}
+                    {#                                                <option value="1">Парикмахерские услуги</option>#}
+                    {#                                                <option value="2">Маникюр</option>#}
+                    {#                                                <option value="3">Педикюр</option>#}
+                    {#                                            </select>#}
+                    {#                                            <label for="floatingSelect">Works with selects</label>#}
+                    {#                                        </div>#}
+                    {##}
+                    {#                                        <div class="modal-footer">#}
+                    {#                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">#}
+                    {#                                                Close#}
+                    {#                                            </button>#}
+                    {#                                            <button type="submit" class="btn btn-dark">Send message</button>#}
+                    {#                                        </div>#}
+                    {#                                    </form>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+                </div>
+            </div>
+    </section>
+
+{% endblock content %}

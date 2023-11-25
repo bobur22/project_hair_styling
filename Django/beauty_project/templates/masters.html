@@ -1,0 +1,79 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="section_1_d" style="background-color: #000000" id="section_2">
+        <div class="sec_1sen text-center">
+            <h1 class=" font-f-g">Наши мастера</h1>
+        </div>
+        <div class="sec_1img container pt-5">
+            <div class="row row-cols-2 row-cols-md-3 g-4">
+                {% for i in master %}
+                    <div class="col">
+                        <div class="card h-100 bg-black border-0">
+                            <a href="{% url 'master_detail' id=i.id %}"><img src="{{ i.img.url }}" class="card-img-top opacity_img" alt="..."></a>
+                            <div class="card-body" style="background-color:black;">
+                                <h5 class="card-title font-f-g h4" style="font-weight: 500"><a
+                                        href="{% url 'master_detail' id=i.id %}" class="heanav
+                                ">{{ i.text_n.title }}</a></h5>
+                                <p class="font-f-cg text-white">{{ i.text_w.capitalize }}</p>
+                                {% if request.user.is_superuser %}
+                                    <div class="w-100 d-flex justify-content-end">
+                                            <a href="" class="btn btn-outline-danger me-3"><i
+                                                    class="bi bi-trash-fill"></i></a>
+                                            <a href="{% url "master_update" i.id %}" class="btn btn-outline-success"><i
+                                                    class="bi bi-pencil-fill"></i></a>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            {% if request.user.is_superuser %}
+                <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@getbootstrap">Send an Image and Text
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Image:</label>
+                                        <input type="file" class="form-control" id="recipient-name" name="img">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">h1:</label>
+                                        <input type="text" class="form-control" id="message-text" name="text_n"></input>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Text:</label>
+                                        <input type="text" class="form-control" id="message-text" name="text"></input>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-dark">Send message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endblock content %}

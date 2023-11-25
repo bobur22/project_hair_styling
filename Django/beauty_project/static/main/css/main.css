@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=EB+Garamond:wght@400;700&display=swap');
+
+.header_1 {
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.font-f-g {
+    font-family: 'EB Garamond', serif;
+    color: white !important;
+}
+
+.font-f-cg {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: white !important;
+}
+
+.heanav {
+    text-decoration: none;
+    color: white;
+}
+
+.heanav_1 {
+    text-decoration: none;
+    color: white !important;
+}
+
+.heanav_1:hover {
+    color: #CDAA7D !important;
+    border-bottom: none !important;
+}
+
+.heanav.active,
+.heanav:hover {
+    border-bottom: 1px solid #CDAA7D;
+    color: #CDAA7D !important;
+    padding-bottom: 2px;
+}
+
+.h1_header {
+    padding-top: 180px;
+}
+
+.mouse {
+    padding-top: 140px;
+}
+
+.section {
+    background-color: black !important;
+}
+
+.section_1_d {
+    padding-top: 120px;
+}
+
+.sec_1_p {
+    width: 800px;
+}
+
+.sec_1logos {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.ul_1 {
+    width: 800px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.sec_2_img > div >img {
+    width: 400px;
+}
+
+.opacity_img{
+    opacity: 0.4;
+    transition: 0.7s ease-in;
+
+}
+
+.opacity_img:hover{
+    opacity: 1.0;
+    transition: .6s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.ul_li > li {
+    list-style: none;
+}
+
+.price_text {
+    padding-left: 48px;
+}
+.img_jazz {
+        max-width: 400px;
+    }
+
+@media (max-width: 576px) {
+    .img_jazz {
+        max-width: 50px;!important;
+    }
+    footer > h4 {
+        font-size: 17px!important;
+    }
+    footer > p {
+        font-size: 10px!important;
+    }
+    .h1_ind {
+        font-size: 45px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .img_jd {
+        display: none;
+    }
+    .input_fl {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .img_jd {
+        text-align: center;
+    }
+    .uli_a {
+        display: none;
+    }
+    .ul_li {
+        padding: 0px;
+    }
+
+    .price_text {
+        padding-left: 0px;
+    }
+    .img_jazz {
+        max-width: 250px;
+    }
+    .h1_ind {
+        font-size: 55px !important;
+        max-width: 450px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .img_jazz {
+        max-width: 350px;
+    }
+}
+
