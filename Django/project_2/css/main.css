@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/* My added things */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+:root {
+    --yellow: #F5C24D;
+    --black: #000;
+    --red: #ED6059;
+    --green: #2DF57D;
+    --blue: #2A819E;
+    --grey: #737171;
+
+    --back-img: url(/img/back-img.svg);
+
+
+    --abel-font: 'Abel', sans-serif;
+    --exo-font: 'Exo', sans-serif;
+    --baloo-font: 'Baloo 2', sans-serif;
+    --inter-font: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--back-img);
+    background-blend-mode: multiply;
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    /* width: 100%; */
+}
+
+.gallery {
+    background: url(/img/gallery.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 87px 30px 87px;
+}
+
+.main_t > h1 {
+    font-family: var(--baloo-font);
+    font-weight: 700;
+}
+
+.main_t > p {
+    font-family: var(--inter-font);
+    font-weight: 400;
+    text-align: justify;
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 500px;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+
+.works > .gallery > .search > button {
+    background-color: var(--green);
+    font-family: var(--inter-font);
+    font-size: 14px;
+    border-radius: 15px;
+    margin-top: 190px;
+    margin-left: 184px;
+}
+
+.works > .gallery > .search > button:hover {
+    background-color: #3de07e;
+}
+
+.works_c > div > div > div > div > h5 > a {
+    color: var(--red);
+    font-family: var(--inter-font);
+    text-decoration: none;
+}
+
+.anketa > .konkurs {
+    background: url(/img/konkurs.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 87px 80px 87px;
+}
+
+.anketa > .konkurs > .main_t > p {
+    max-width: 700px;
+}
+
+.anketa > .konkurs > .main_t > button {
+    background-color: #6495C2;
+    font-family: var(--inter-font);
+    max-width: 180px;
+}
+
+.anketa > .konkurs > .main_t > button:hover {
+    background-color: #7bb3fc;
+}
+
+.anketa > .anketa_k {
+    background-color: var(--yellow);
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    padding: 14px 87px 65px 87px;
+    border-radius: 25px;
+}
+
+.anketa > .anketa_k > .ak_info > h3 {
+    font-family: var(--abel-font);
+}
+
+.anketa > .anketa_k > .ak_info > p {
+    font-family: var(--abel-font);
+}
+
+.anketa > .anketa_k > .ak_button > button {
+    background-color: var(--green);
+    padding: 15px 70px 15px 70px;
+    font-family: var(--abel-font);
+}
+
+@media (max-width: 1400) {
+
+}
+
+@media (max-width: 1200) {
+
+}
+
+@media (max-width: 992) {
+
+}
+
+@media (max-width: 768) {
+    
+}
+
+@media (max-width: 576) {
+    
+}
