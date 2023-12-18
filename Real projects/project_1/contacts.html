@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<style>
+    .contacts > div > div > h1 {
+        font-family: var(--baloo-font);
+        font-weight: 700;
+    }
+    
+    .contacts > div > .c_logo {
+        padding-right: 130px;
+    }
+    
+    .contacts > .c_form {
+        background-color: var(--yellow);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 60px 60px 60px 60px;
+    } 
+    
+    .contacts > .c_form > div > div > h4 {
+        font-family: var(--inter-font);
+        font-weight: 800;
+    }
+    
+    .contacts > .c_form > div > div > p > a{
+        color: black;
+        font-family: var(--inter-font);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="container contacts">
+
+        <div class="d-flex justify-content-between align-items-center pt-5">
+            <div class="">
+                <h1 class="display-2 text-center">КОНТАКТЫ</h1>
+                <img src="./img//contacts_i.svg" class="card-img-top" alt="image" name="img">
+            </div>
+            <div class="c_logo">
+                    <img src="./img/logo.svg" class="card-img-top" alt="image" name="img">
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-between c_form mt-3">
+            <div class="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8173.930067771933!2d69.2112200918092!3d41.332942316848595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1702123694952!5m2!1sen!2s" width="630" height="560" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                <div class="f_con pb-0 col">
+                    <h4 class="font-f-g text-black h5 h4-sm w-50 w-sm-100">КОНТАКТЫ</h4>
+                    <p class="font-f-cg text-black">Улица Узбекистан, Юнособотский район, город Ташкент</p>
+                    <p class="font-f-cg text-black"><a href="tel:+78121234567" class="heanav">+99897 123-45-67</a></p>
+                    <p class="font-f-cg text-black"><a href="tel:+78121234567" class="heanav">+99897 123-45-67</a></p>
+                    <p class="font-f-cg text-black"><a href="mailto:Delote_Beauty_salon@gmail.com" class="heanav">
+                        email@gmail.com</a></p>
+                </div>
+                <div class="card-body bg-none ps-0">
+                    <div class="row-cols-sm-2 ">
+                        <div class="col-sm-12">
+                            <p class="mb-0 text-black font-f-g pb-2">Имя *</p>
+                            <input type="text" class="form-control text-grey ps-4 px-4 rounded-4" aria-label="First name" name="f_name" placeholder="Имя">
+                        </div>
+                    </div>
+                    <div class="row mb-3 mt-3">
+                        <div class="col">
+                            <p class="mb-0 text-black font-f-g pb-2">Почта *</p>
+                            <input type="email" class="form-control text-grey ps-4 rounded-4" id="inputEmail3" name="email" placeholder="Ваш электронный адрес">
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <p class="mb-0 text-black font-f-g pb-2">Сообщения *</p>
+                        <textarea class="form-control text-grey pt-2 pb-1 ps-4 rounded-4" id="floatingTextarea2" value="Отзывы"
+                                  style="height: 145px;" name="report"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="works_c pt-3">
+            <div class="row row-cols-2 row-cols-md-3 g-4 justify-content-between">
+                    <div class="col-4">
+                        <div class="card border-0" style="background: none;">
+                            <div class="card-body text-white ps-0 w-50">
+                                <h5 class="card-title"><a
+                                        href="..." class="heanav">МАМУЛЕЧКА</a></h5>
+                            </div>
+                            <div class="w-100">
+                                <a href="...">
+                                    <img src="./img/Image_gp1.svg" class="card-img-top" alt="image"
+                                        name="img"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0" style="background: none;">
+                            <div class="card-body text-white ps-0 w-50">
+                                <h5 class="card-title"><a
+                                        href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                            </div>
+                            <div class="w-100">
+                                <a href="...">
+                                    <img src="./img/Image_gp2.svg" class="card-img-top" alt="image"
+                                        name="img"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0" style="background: none;">
+                            <div class="card-body text-white ps-0 w-50">
+                                <h5 class="card-title"><a
+                                        href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                            </div>
+                            <div class="w-100">
+                                <a href="...">
+                                    <img src="./img/Image_gp3.svg" class="card-img-top" alt="image"
+                                        name="img"></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="row row-cols-2 row-cols-md-3 g-4 justify-content-between">
+                <div class="col-4">
+                    <div class="card border-0" style="background: none;">
+                        <div class="card-body text-white ps-0 w-50">
+                            <h5 class="card-title"><a
+                                    href="..." class="heanav">МАМУЛЕЧКА</a></h5>
+                        </div>
+                        <div class="w-100">
+                            <a href="...">
+                                <img src="./img/Image_gp1.svg" class="card-img-top" alt="image"
+                                    name="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card border-0" style="background: none;">
+                        <div class="card-body text-white ps-0 w-50">
+                            <h5 class="card-title"><a
+                                    href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                        </div>
+                        <div class="w-100">
+                            <a href="...">
+                                <img src="./img/Image_gp2.svg" class="card-img-top" alt="image"
+                                    name="img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card border-0" style="background: none;">
+                        <div class="card-body text-white ps-0 w-50">
+                            <h5 class="card-title"><a
+                                    href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                        </div>
+                        <div class="w-100">
+                            <a href="...">
+                                <img src="./img/Image_gp3.svg" class="card-img-top" alt="image"
+                                    name="img"></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 g-4 justify-content-between">
+            <div class="col-4">
+                <div class="card border-0" style="background: none;">
+                    <div class="card-body text-white ps-0 w-50">
+                        <h5 class="card-title"><a
+                                href="..." class="heanav">МАМУЛЕЧКА</a></h5>
+                    </div>
+                    <div class="w-100">
+                        <a href="...">
+                            <img src="./img/Image_gp1.svg" class="card-img-top" alt="image"
+                                name="img"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-0" style="background: none;">
+                    <div class="card-body text-white ps-0 w-50">
+                        <h5 class="card-title"><a
+                                href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                    </div>
+                    <div class="w-100">
+                        <a href="...">
+                            <img src="./img/Image_gp2.svg" class="card-img-top" alt="image"
+                                name="img"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-0" style="background: none;">
+                    <div class="card-body text-white ps-0 w-50">
+                        <h5 class="card-title"><a
+                                href="..." class="heanav">ПРИШЛА ВЕСНА</a></h5>
+                    </div>
+                    <div class="w-100">
+                        <a href="...">
+                            <img src="./img/Image_gp3.svg" class="card-img-top" alt="image"
+                                name="img"></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        </div> -->
+
+        <!-- <div class="pagination d-flex justify-content-center pt-5">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div> -->
+
+    </div>
+
+    
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

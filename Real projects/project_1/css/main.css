@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/* My added things */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+:root {
+    --yellow: #F5C24D;
+    --black: #000;
+    --red: #ED6059;
+    --green: #2DF57D;
+    --blue: #2A819E;
+    --grey: #737171;
+
+    --back-img: url(/img/back-img.svg);
+
+
+    --abel-font: 'Abel', sans-serif;
+    --exo-font: 'Exo', sans-serif;
+    --baloo-font: 'Baloo 2', sans-serif;
+    --inter-font: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--back-img);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Starting works */
+
+.gallery {
+    background: url(/img/gallery.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 87px 50px 87px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_t > h1 {
+    font-family: var(--baloo-font);
+    font-weight: 700;
+}
+
+.main_t > p {
+    font-family: var(--inter-font);
+    font-weight: 400;
+    text-align: justify;
+    width: 360px;
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 500px;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+
+.works > .gallery > .search > button {
+    background-color: #92F246;
+    font-family: var(--inter-font);
+    font-size: 14px;
+    border-radius: 15px;
+    margin-top: 190px;
+    padding: 16px 48px 16px 48px;
+}
+
+.works > .gallery > .search > button:hover {
+    background-color: #3de07e;
+}
+
+.works_c > div > div > div > div > h5 > a {
+    color: var(--red);
+    font-family: var(--inter-font);
+    text-decoration: none;
+}
+
+.works > .page_p > ul > li > a {
+    background-color: var(--yellow);
+    color: black;
+}
+
+.works > .page_p > ul > li > .np {
+    background-color: #ED6059;
+}
+
+.works > .page_p > ul > li > a:hover,
+.works > .page_p > ul > li > a:active{
+    background-color: var(--red);
+    border-radius: 5px;
+}
+
+/* Finishing works */
+
+/* Starting anketa */
+
+.anketa > .konkurs {
+    background: url(/img/konkurs.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 87px 80px 87px;
+}
+
+.anketa > .konkurs > .main_t > p {
+    max-width: 700px;
+}
+
+.anketa > .konkurs > .main_t > button {
+    background-color: #6495C2;
+    font-family: var(--inter-font);
+    max-width: 180px;
+}
+
+.anketa > .konkurs > .main_t > button:hover {
+    background-color: #7bb3fc;
+}
+
+.anketa > .anketa_k {
+    background-color: var(--yellow);
+    padding: 20px 87px 65px 87px;
+    border-radius: 25px;
+}
+
+.anketa > .anketa_k > .ak_info > h3 {
+    font-family: var(--abel-font);
+}
+
+.anketa > .anketa_k > .ak_info > p {
+    font-family: var(--abel-font);
+    /* max-width: 43%; */
+}
+
+/* .anketa > .anketa_k > .ak_info > .hr_l {
+    width: 43%;
+} */
+
+.anketa > .anketa_k > .ak_button > button {
+    background-color: var(--green);
+    padding: 15px 70px 15px 70px;
+    font-family: var(--abel-font);
+}
+
+.anketa > .anketa_k > .ak_button > button:hover {
+    background-color: #3de07e;
+}
+
+.anketa > #anketa_k > .ak_input > .f_name,
+.anketa > #anketa_k > .ak_input > .l_name {
+    display: none;
+}
+/* Finishing anketa */
+
+/* Starting log in */
+
+.login > .kabinet {
+    background: url(/img/login.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 87px 300px 87px;
+}
+
+.login > .login_k {
+    background-color: var(--yellow);
+    padding: 20px 170px 65px 170px;
+}
+.login > .kabinet > .main_t > h1 {
+    font-size: 72px;
+}
+.login > .login_k > .lk_button > button {
+    background-color: var(--green);
+    padding: 15px 85px 15px 85px;
+    font-family: var(--abel-font);
+}
+
+.login > .login_k > .lk_button > button:hover {
+    background-color: #3de07e;
+}
+
+.login > .login_k > .l_parol > .lchp >label {
+    font-family: var(--abel-font);
+    font-weight: 300;
+}
+
+.login > .login_k > .l_parol > .lch_p > h2 {
+    font-family: var(--abel-font);
+    font-weight: 300;
+}
+
+.login > .login_k > .lk_sen > h2 {
+    border-bottom: 3px solid white;
+}
+
+.login > .login_k > .sh_icons > .shu_icons > div > i:hover {
+    transition: ;
+}
+/* Finishing log in */
+
+@media (max-width: 1400px) {
+    .gallery {
+        padding: 80px 70px 50px 70px;
+    }
+    .main_t > p {
+        width: 350px;
+    }
+
+    .works > .gallery > .search > button {
+        padding: 16px 40px 16px 40px;
+    }
+    .login > .kabinet > .main_t > h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .gallery {
+        padding: 80px 55px 50px 55px;
+    }
+
+    .main_t > h1 {
+        font-size: 55px;
+        padding-top: 10px;
+    }
+    
+    .main_t > p {
+        font-size: 15px;
+        width: 280px;
+    }
+
+    .works > .gallery > .search > button {
+        padding: 16px 40px 16px 40px;
+        font-size: 12px;
+    }
+
+    .works_c > div > div > div > div > h5 > a {
+        font-size: 18px;
+    }
+
+    .anketa > .konkurs {
+        padding: 80px 60px 80px 60px;
+    }
+    .anketa > #anketa_k {
+        padding: 18px 60px 65px 60px;
+    }
+
+    .login > .kabinet {
+        padding: 80px 60px 280px 60px;
+    }
+    .login > .kabinet > .main_t > h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .gallery {
+        padding: 60px 40px 35px 40px;
+    }
+
+    .main_t > h1 {
+        font-size: 52px;
+    }
+    
+    .main_t > p {
+        font-size: 13px;
+        width: 260px;
+    }
+
+    .works > .gallery > .search > button {
+        padding: 14px 25px 14px 25px;
+    }
+
+    .works_c > div > div > div > div > h5 {
+        width: 200px;
+    }
+
+    .anketa > .konkurs {
+        padding: 80px 50px 80px 50px;
+    }
+    .anketa > #anketa_k {
+        padding: 16px 50px 65px 50px;
+    }
+
+    .anketa > #anketa_k > .ak_input > .name {
+        display: none;
+    }
+    .anketa > #anketa_k > .ak_input > .f_name,
+    .anketa > #anketa_k > .ak_input > .l_name {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery {
+        padding: 60px 30px 35px 30px;
+    }
+
+    .search > form > .group {
+        display: none;
+    }
+
+    .works > .gallery > .search > button {
+        padding: 14px 25px 14px 25px;
+        font-size: 10px;
+        margin-top: 210px;
+    }
+    
+    .works_c > div > div > div > div > h5 > a{
+        font-size: 16px;
+    }
+    .works_c > div > div > div > div > h5 {
+        width: 140px;
+    }
+    
+    .anketa > .konkurs > .main_t > p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .anketa > .konkurs {
+        padding: 80px 40px 80px 40px;
+    }
+    .anketa > #anketa_k {
+        padding: 14px 40px 65px 40px;
+    }
+    .login > .kabinet > .main_t > h1 {
+        font-size: 40px;
+    }
+    .login > .kabinet {
+        padding: 80px 60px 150px 60px;
+    }
+    /* .login > .login_k > .l_parol > .lchp >label {
+        font-size: 18px;
+    }
+    .login > .login_k > .l_parol > .lch_p > h2 {
+        font-size: 20px;
+    } */
+}
+
+@media (max-width: 576px) {
+
+    .gallery {
+        display: block;
+        padding: 50px 20px 30px 20px;
+    }
+
+    .gallery > .main_t,
+    .gallery > .search {
+        width: 100%;
+        /* text-align: center; */
+    }
+    
+    .gallery > .main_t > h1 {
+        max-width: 300px;
+        font-size: 40px;
+    }
+    .gallery > .main_t > p {
+        font-size: 12px;
+        max-width: 200px;
+    }
+
+    .works > .gallery > .search > button {
+        padding: 14px 15px 14px 15px;
+        font-size: 9px;
+        margin-top: 0px;
+    }
+    
+    .works_c > div > div > div > div > h5 > a{
+        font-size: 14px;
+    }
+    .works_c > div > div > div > div > h5 {
+        width: 140px;
+    }
+
+    .anketa > .konkurs > .main_t{
+        text-align: center;
+    }
+
+    .anketa > .konkurs > .main_t > h1 {
+        font-size: 30px;
+    }
+
+    .anketa > .konkurs {
+        padding: 80px 20px 80px 20px;
+    }
+    .anketa > #anketa_k {
+        padding: 14px 20px 65px 20px;
+    }
+
+    .anketa > #anketa_k > .ak_input > .gender {
+        display: flex;
+        justify-content: center;
+    }
+
+    .anketa > .anketa_k > .ak_button {
+        text-align: center;
+    }
+    .login > .kabinet {
+        padding: 80px 60px 150px 60px;
+    }
+    .login > .kabinet > .main_t {
+        text-align: center;
+    }
+    .login > .kabinet > .main_t > h1 {
+        font-size: 35px;
+    }
+}
