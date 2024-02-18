@@ -41,9 +41,12 @@
                     {% for i in posts %}
                         <div class="col">
                             <div class="card h-100 bg-black bg border-0">
-                                <img src="{{ i.img.url }}" class="card-img-top opacity_img" alt="..." name="img">
+                                <a href="{% url 'home_post' id=i.id %}">
+                                    <img src="{{ i.img.url }}" class="card-img-top opacity_img" alt="..."
+                                         name="img"></a>
                                 <div class="card-body text-white" style="background-color:black;">
-                                    <h5 class="card-title font-f-g"> {{ i.text }} </h5>
+                                    <h5 class="card-title font-f-g"><a
+                                            href="{% url 'home_post' id=i.id %}" class="heanav">{{ i.text }}</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -91,37 +94,6 @@
                 {% endif %}
 
             </div>
-
-            <!-- <div class="sec_1img pt-5 container ">
-                <div class="img_con_1 row">
-                    <div class="img_info col">
-                        <img src="/img/sec_1_1.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Парикмахерские услуги</span>
-                    </div>
-                    <div class="img_info col">
-                        <img src="/img/sec_1_2.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Маникюр</span>
-                    </div>
-                    <div class="img_info col">
-                        <img src="/img/sec_1_3.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Педикюр</span>
-                    </div>
-                </div>
-                <div class="img_con_2 row pt-5">
-                    <div class="img_info col">
-                        <img src="/img/sec_1_4.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Косметология</span>
-                    </div>
-                    <div class="img_info col">
-                        <img src="/img/sec_1_5.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Эстетист по телу</span>
-                    </div>
-                    <div class="img_info col">
-                        <img src="/img/sec_1_6.jpg" alt="" class="pb-4">
-                        <span class="font-f-g h3 text-white">Визаж</span>
-                    </div>
-                </div>
-            </div> -->
             <div class="sec_1logos container text-center">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-5 pb-5 col-md">

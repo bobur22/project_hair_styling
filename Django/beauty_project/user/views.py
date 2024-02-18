@@ -25,10 +25,11 @@ def register_view(request):
 
 
 def login_view(request):
+    path_l = "/"
+    # if request.method == "GET":
+    #     path_l = request.GET.get("next", "")
+
     form = LoginForm()
-    # if request.user.is_authenticated:
-    #     return redirect("beaty")
-    # else:
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -38,17 +39,8 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect("beaty")
+            return redirect(path_l)
         form.add_error("password", "Username yoki parol noto\'g\'ri ")
-    # username = request.POST.get("username")
-    # password = request.POST.get("password")
-
-
-#         user = authenticate(request, username=username, password=password)
-#
-#         if user is not None:
-#             login(request, user)
-#             return redirect("beaty")
     return render(request, "accounts/login.html", {"form": form})
 
 

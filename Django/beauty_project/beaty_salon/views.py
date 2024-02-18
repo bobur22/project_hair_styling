@@ -27,41 +27,33 @@ def beaty_view(request):
     obj = PostModel.objects.all()
     return render(request, template_name="index.html", context={"posts": obj, "lulu":vv})
 
-
-# def beatysec_view(request):
-#     sec_img = SecPI1_Model.objects.all()
-#     cat = Categories.objects.all()
-#     v = request.GET.get("category", "")
-#     v_f = ""
-#     print(v)
-#     if v:
-#         v_f = sec_img.filter(categories__name=v)
-#         print(v_f)
-#
-#     # if request.method == "POST":
-#     #     print("Salom")
-#     #     img = request.FILES['img']
-#     #     img_sec = SecPI1_Model(img=img)
-#     #     img_sec.save()
-#     #     return redirect('beaty')
-#     return render(request, template_name="index.html", context={"v": v, "v_f": v_f, "sec_img":sec_img, "cat":cat})
-
+def home_section1(request, id):
+    home_post = PostModel.objects.get(id=id)
+    return render(request, "forms/home_section1.html", {"home_post":home_post})
 
 def master_view(request):
+    master = MastersModel.objects.all()
     if request.method == "POST":
         img = request.FILES["img"]
         text_n = request.POST["text_n"]
         text = request.POST["text"]
         obj_1 = MastersModel(img=img, text_n=text_n, text=text)
         obj_1.save()
+
         return redirect("master")
-    master = MastersModel.objects.all()
     return render(request, template_name="masters.html", context={"master": master, })
 
 
 def master_detail(request, id):
     master_d = MastersModel.objects.get(id=id)
     return render(request, "forms/detail_master.html", {"master_d": master_d})
+
+def master_delete(request, id):
+    master_d = MastersModel.objects.get(id=id)
+    if request.method == "POST":
+        master_d.delete()
+        return redirect("master")
+    return render(request, "forms/master_delete.html", {"master_d":master_d})
 
 
 def master_update_view(request, id):
@@ -143,7 +135,7 @@ def booking_view(request):
         send_mail(
             'Booking:', message, 'settings.EMAIL_HOST_USER', [email], fail_silently=False)
         text = "Booking to the Hair salon Delote-beauty: \n"
-        text += f"Name: {f_name}\n"
+        text += f"Name: {f_name} {l_name}\n"
         text += f"Email: {email}\n"
         text += f"Phone number: {phone}\n"
         text += f"Date: {date} {time}\n"

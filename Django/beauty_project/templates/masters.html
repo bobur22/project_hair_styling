@@ -19,7 +19,7 @@
                                 <p class="font-f-cg text-white">{{ i.text_w.capitalize }}</p>
                                 {% if request.user.is_superuser %}
                                     <div class="w-100 d-flex justify-content-end">
-                                            <a href="" class="btn btn-outline-danger me-3"><i
+                                            <a href="{% url "master_delete" i.id %}" class="btn btn-outline-danger me-3"><i
                                                     class="bi bi-trash-fill"></i></a>
                                             <a href="{% url "master_update" i.id %}" class="btn btn-outline-success"><i
                                                     class="bi bi-pencil-fill"></i></a>
@@ -72,6 +72,8 @@
                     </div>
                 </div>
             {% endif %}
+
+
 
         </div>
     </div>

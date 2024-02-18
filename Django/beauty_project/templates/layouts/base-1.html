@@ -10,12 +10,15 @@
     <title>Delote-Beauty</title>
     <link rel="icon" type="image/x-icon" href="{% static "main/img/Vectorlogo.svg" %}">
 
-    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static "bootstrap_icons" %}">
+
 </head>
 <body style="background-color: black;" class="container">
 
@@ -32,6 +35,7 @@
 {% include "layouts/footer.html" %}
 
 
+<script src="{% static "bootstrap/js/bootstrap.bundle.js" %}"></script>
 <script src="{% static "main/js/main.js" %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

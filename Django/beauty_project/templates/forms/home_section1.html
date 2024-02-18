@@ -1,0 +1,17 @@
+{% extends "layouts/base-1.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="card div_mmaster container" style="background: none;">
+        <div class="card-body d-grid">
+            <div class="row align-items-center">
+                <div class="w-50 text-center pe-lg-5 col pb-sm-5 pb-5 div_img_master">
+                    <h5 class="card-title font-f-g h4" style="font-weight: 600">{{ home_post.text.capitalize }}</h5>
+                </div>
+                <div class="col-lg col-xl col-xxl text-center text-lg-end div_img_master_img">
+                    <img class="card-img-right rounded-5" src="{{ home_post.img.url }}" alt="Card image cap ">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

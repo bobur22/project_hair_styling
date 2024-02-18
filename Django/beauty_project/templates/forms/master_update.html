@@ -3,7 +3,7 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-    <form action="" method="POST">
+    <form action="" method="POST" class="pt-5 mt-5">
         {% csrf_token %}
         <div class="container-md" style="width: 400px">
             {{ form|crispy }}
